@@ -23,7 +23,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         listView = findViewById(R.id.listView);
 
-        ArrayAdapter<String> movieAdapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_list_item_1, movies);
+        // title, actor, year, summary
+        Movie gump = new Movie("Forrest gump",
+                "Tom Hanks",
+                "1994",
+                "Plot summary: Mentally challenged man becomes football star, vietnam war hero, ping pong champion, champion runner, and shrimp boat captain, all the while being cucked by some skank named Jenny who leaves him a kid at the end and dies from an STD contracted from one either her promiscuous sexual past or intravenous drug usage");
+
+
+        Movie network = new Movie("The Social Network",
+                "Jesse Eisenberg",
+                "2010",
+                "");
+
+        Movie jobs = new Movie("Jobs",
+                "Ashton",
+                "1994",
+                "");
+
+        Movie ip = new Movie("IP Man",
+                "Tom Hanks",
+                "1994",
+                "");
+        Movie oldboy = new Movie("Old Boy",
+                "Tom Hanks",
+                "1994",
+                "");
+
+        Movie[] movieList = new Movie[] {gump, network, jobs, ip, oldboy};
+
+        ArrayAdapter<Movie> movieAdapter = new ArrayAdapter<Movie>(getBaseContext(), android.R.layout.simple_list_item_1, movieList);
 
         listView.setAdapter(movieAdapter);
 

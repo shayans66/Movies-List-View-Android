@@ -20,7 +20,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
 
-        String movieName = (String) getIntent().getExtras().get("Movie name: ");
+        Movie movie = (Movie) getIntent().getExtras().get("Movie name: ");
 
         imageView = findViewById(R.id.imageView);
         movieTextView = findViewById(R.id.movieTextView);
@@ -28,7 +28,32 @@ public class MovieDetailActivity extends AppCompatActivity {
         actorTextView = findViewById(R.id.actorTextView);
         descriptionTextView = findViewById(R.id.descriptionTextView);
 
+        // title, actor, year, summary, image
+        movieTextView.setText(movie.getTitle());
+        actorTextView.setText(movie.getActor());
+        yearTextView.setText(movie.getYear());
+        descriptionTextView.setText(movie.getSummary());
+
+        if(movie.equals("Forrest gump")){
+            imageView.setImageResource(R.drawable.gump);
+        }
+        if(movie.equals("The Social Network")){
+            imageView.setImageResource(R.drawable.gump);
+        }
+        if(movie.equals("Jobs")){
+
+        }
+        if(movie.equals("Forrest gump")){
+
+        }
+        if(movie.equals("Forrest gump")){
+
+        }
 
         //System.out.println("movie is here: "+ movieName);
+
+
+
+
     }
 }

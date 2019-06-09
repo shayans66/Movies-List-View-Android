@@ -34,20 +34,20 @@ public class MovieDetailActivity extends AppCompatActivity {
         yearTextView.setText(movie.getYear());
         descriptionTextView.setText(movie.getSummary());
 
-        if(movie.equals("Forrest gump")){
+        if(movie.getTitle().equals("Forrest gump")){
             imageView.setImageResource(R.drawable.gump);
         }
-        if(movie.equals("The Social Network")){
-            imageView.setImageResource(R.drawable.gump);
+        if(movie.getTitle().equals("The Social Network")){
+            imageView.setImageResource(R.drawable.socialnetwork);
         }
-        if(movie.equals("Jobs")){
-
+        if(movie.getTitle().equals("Jobs")){
+            imageView.setImageResource(R.drawable.jobs);
         }
-        if(movie.equals("Forrest gump")){
-
+        if(movie.getTitle().equals("IP Man")){
+            imageView.setImageResource(R.drawable.ipman);
         }
-        if(movie.equals("Forrest gump")){
-
+        if(movie.getTitle().equals("Old Boy")){
+            imageView.setImageResource(R.drawable.oldoby);
         }
 
         //System.out.println("movie is here: "+ movieName);

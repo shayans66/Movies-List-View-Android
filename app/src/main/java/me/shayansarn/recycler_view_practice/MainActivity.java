@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     ListView listView;
 
+    Movie[] movieList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,23 +34,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Movie network = new Movie("The Social Network",
                 "Jesse Eisenberg",
                 "2010",
-                "");
+                "Mark Zuckerberg and a couple of his friends found \"The Facebook\", an online social media platform that helps friends and acquantences connected with each other. However, Zuck finds himself in a lot of legal troubles after people accuse him of stealing their ideas for Facebook");
 
         Movie jobs = new Movie("Jobs",
                 "Ashton",
-                "1994",
-                "");
+                "2013",
+                "Steve Jobs and his friend Steve Wozniak cofound Apple, and it becomes a huge company. However, Jobs gets fired from the company and founds Pixar. In the end, whatever Jobs makes turns into a multi billion dollar company.");
 
         Movie ip = new Movie("IP Man",
-                "Tom Hanks",
-                "1994",
-                "");
+                "Donnie Yen",
+                "2008",
+                "There is an old Kung fu guy named Ip man (Yes, that's his real name). And he teaches Bruce Lee his form of martial arts, Wing chun, to make Bruce lee the biggest martial arts legend of all time.");
         Movie oldboy = new Movie("Old Boy",
-                "Tom Hanks",
-                "1994",
-                "");
+                "Josh Brolin",
+                "2013",
+                "Some dude gets kidnapped and locked in a hotel room for 20 years, where he gets fed and showered, but he never finds out why he's being kept there and cannot escape. When he gets released without any whereabouts of his captors, he goes on a mission to find out who imprisoned him and exact justice on his captors. ");
 
-        Movie[] movieList = new Movie[] {gump, network, jobs, ip, oldboy};
+        movieList = new Movie[] {gump, network, jobs, ip, oldboy};
 
         ArrayAdapter<Movie> movieAdapter = new ArrayAdapter<Movie>(getBaseContext(), android.R.layout.simple_list_item_1, movieList);
 
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Intent moveToDetailIntent = new Intent(getBaseContext() , MovieDetailActivity.class);
 
-        moveToDetailIntent.putExtra("Movie name: ", movies[position]);
+        moveToDetailIntent.putExtra("Movie name: ", movieList[position]);
         startActivity(moveToDetailIntent);
     }
 }

@@ -2,7 +2,10 @@ package me.shayansarn.recycler_view_practice;
 
 import android.widget.ImageView;
 
-public class Movie {
+import java.io.Serializable;
+import java.io.SerializablePermission;
+
+public class Movie implements Serializable {
 
 
     private String title, actor, year, summary;
